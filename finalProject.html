@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WEB-115 Final Project</title>
+	<style>
+    /* Banner styling */
+    .banner {
+      background-color: #007bff; /* Blue background color */
+      color: white; /* Text color */
+      padding: 2px; /* Padding around content */
+      text-align: center; /* Center align text */
+      border-radius: 2px; /* Rounded corners */
+    }
+
+    /* Business card styling */
+    .business-card {
+      background-color: #ffffff; /* White background color */
+      border: 1px solid #007bff;
+      color: #333333; /* Text color */
+      padding: 2px; /* Padding around content */
+      border-radius: 2px; /* Rounded corners */
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); /* Box shadow for depth */
+      float: left; /* Align business card to the left */
+      margin-right: 20px; /* Add space between banner content and business card */
+    }
+
+    .personal_info {
+      width: 50%; /* Set the width of the div */
+      margin: 0 auto; /* Set margin top and bottom to 0 and left and right to auto */
+      padding: 20px; /* Add padding for content inside */
+    }
+
+    /* Style for input fields */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      box-sizing: border-box; /* Include padding and border in the element's total width and height */
+      background-color: #f5f5f5; /* Background color */
+      border: 1px solid #ccc; /* Border color */
+      border-radius: 4px; /* Rounded corners */
+    }
+
+  </style>
+  <script type="text/javascript" src='projectJS.js' async></script>
+</head>
+<body>
+	<div class="banner">
+	  <!-- Business card -->
+	  <div class="business-card">
+	    <h3>Contact Information</h3>
+	    <p>Name: Melvin Hill</p>
+	    <p>Email: melvinhill.861@gmail.com</p>
+	    <p>Phone: 614-516-5780</p>
+	    <p>Course: WEB-115</p>
+	    <p>Section: 0003</p>
+	  </div>
+	  <h1>Build Your Meal Plan!</h1>
+	</div>
+
+	<!-- Your page content goes here -->
+	<div class="personal_info">
+		<h2>Weekly Goal Submission</h2>
+		<form action="/submit_goal" method="post">
+		  <label for="name">Step 1 - Enter Your Name:</label><br>
+		  <input type="text" id="name" name="name"><br><br>
+
+		  <label for="email">Step 2 - Enter Your Email Address:</label><br>
+		  <input type="email" id="email" name="email"><br><br>
+		  <!-- Error message for invalid email -->
+  		  <p id="error-message"></p>
+
+		  <label for="goal">Step 3 - Enter Your Goal for the Week:</label><br>
+		  <textarea id="goal" name="goal" rows="4" cols="50"></textarea><br><br>
+
+		  <input type="submit" value="Submit">
+		</form>
+	</div>
+
+	<div>
+		<h2>Meal Plan Generator</h2>
+		<form>
+		  <label for="breakfast">Breakfast:</label><br>
+		  <input type="text" id="breakfast" name="breakfast"><br>
+
+		  <label for="snack1">Snack 1:</label><br>
+		  <input type="text" id="snack1" name="snack1"><br>
+
+		  <label for="lunch">Lunch:</label><br>
+		  <input type="text" id="lunch" name="lunch"><br>
+
+		  <label for="snack2">Snack 2:</label><br>
+		  <input type="text" id="snack2" name="snack2"><br>
+
+		  <label for="dinner">Dinner:</label><br>
+		  <input type="text" id="dinner" name="dinner"><br>
+
+		  <!-- Form button to generate meal plan -->
+		  <input type="button" value="Generate Meal Plan" onclick="generateMealPlan()">
+		</form>
+	</div>
+</body>
+</html>
