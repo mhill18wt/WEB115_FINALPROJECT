@@ -14,6 +14,15 @@
       border-radius: 2px; /* Rounded corners */
     }
 
+    /* Banner styling */
+    .footer {
+      background-color: #007bff; /* Blue background color */
+      color: white; /* Text color */
+      padding: 2px; /* Padding around content */
+      text-align: center; /* Center align text */
+      border-radius: 2px; /* Rounded corners */
+    }
+
     /* Business card styling */
     .business-card {
       background-color: #ffffff; /* White background color */
@@ -45,8 +54,16 @@
       border-radius: 4px; /* Rounded corners */
     }
 
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('background-image.jpg'); /* URL to a background image */
+      background-size: auto;
+      background-position: center; /* Center the background image */
+    }
+
   </style>
-  <script type="text/javascript" src='projectJS.js' async></script>
+  <script type="text/javascript" src='projectJS.js'></script>
 </head>
 <body>
 	<div class="banner">
@@ -64,44 +81,144 @@
 
 	<!-- Your page content goes here -->
 	<div class="personal_info">
-		<h2>Weekly Goal Submission</h2>
+		<h3>Follow the step-by-step instructions to build your weekly meal plan</h3>
 		<form action="/submit_goal" method="post">
-		  <label for="name">Step 1 - Enter Your Name:</label><br>
+		  <label for="name"><u>Step 1 - Enter Your Name:</u></label><br>
 		  <input type="text" id="name" name="name"><br><br>
 
-		  <label for="email">Step 2 - Enter Your Email Address:</label><br>
+		  <label for="email"><u>Step 2 - Enter Your Email Address:</u></label><br>
 		  <input type="email" id="email" name="email"><br><br>
 		  <!-- Error message for invalid email -->
-  		  <p id="error-message"></p>
+  		  <p id="error-message" style="font-weight: bold; text-align: center; color: darkred;"></p>
 
-		  <label for="goal">Step 3 - Enter Your Goal for the Week:</label><br>
+		  <label for="goal"><u>Step 3 - Enter Your Goal for the Week:</u></label><br>
 		  <textarea id="goal" name="goal" rows="4" cols="50"></textarea><br><br>
 
-		  <input type="submit" value="Submit">
-		</form>
-	</div>
+		  <label><u>Step 4 - Enter your meals for the week</u></label><br>
 
-	<div>
-		<h2>Meal Plan Generator</h2>
-		<form>
-		  <label for="breakfast">Breakfast:</label><br>
-		  <input type="text" id="breakfast" name="breakfast"><br>
+				  <p style="font-weight: bold; text-align: center;">Monday</p><br>
+				  <label for="mon_breakfast">Breakfast:</label><br>
+				  <input type="text" id="mon_breakfast" name="mon_breakfast"><br>
 
-		  <label for="snack1">Snack 1:</label><br>
-		  <input type="text" id="snack1" name="snack1"><br>
+				  <label for="mon_snack1">Snack 1:</label><br>
+				  <input type="text" id="mon_snack1" name="mon_snack1"><br>
 
-		  <label for="lunch">Lunch:</label><br>
-		  <input type="text" id="lunch" name="lunch"><br>
+				  <label for="mon_lunch">Lunch:</label><br>
+				  <input type="text" id="mon_lunch" name="mon_lunch"><br>
 
-		  <label for="snack2">Snack 2:</label><br>
-		  <input type="text" id="snack2" name="snack2"><br>
+				  <label for="mon_snack2">Snack 2:</label><br>
+				  <input type="text" id="mon_snack2" name="mon_snack2"><br>
 
-		  <label for="dinner">Dinner:</label><br>
-		  <input type="text" id="dinner" name="dinner"><br>
+				  <label for="mon_dinner">Dinner:</label><br>
+				  <input type="text" id="mon_dinner" name="mon_dinner"><br>
 
+				  <p style="font-weight: bold; text-align: center;">Tuesday</p><br>
+				  <label for="tue_breakfast">Breakfast:</label><br>
+				  <input type="text" id="tue_breakfast" name="tue_breakfast"><br>
+
+				  <label for="tue_snack1">Snack 1:</label><br>
+				  <input type="text" id="tue_snack1" name="tue_snack1"><br>
+
+				  <label for="tue_lunch">Lunch:</label><br>
+				  <input type="text" id="tue_lunch" name="tue_lunch"><br>
+
+				  <label for="tue_snack2">Snack 2:</label><br>
+				  <input type="text" id="tue_snack2" name="tue_snack2"><br>
+
+				  <label for="tue_dinner">Dinner:</label><br>
+				  <input type="text" id="tue_dinner" name="tue_dinner"><br>
+
+				  <p style="font-weight: bold; text-align: center;">Wednesday</p><br>
+				  <label for="wed_breakfast">Breakfast:</label><br>
+				  <input type="text" id="wed_breakfast" name="wed_breakfast"><br>
+
+				  <label for="wed_snack1">Snack 1:</label><br>
+				  <input type="text" id="wed_snack1" name="wed_snack1"><br>
+
+				  <label for="wed_lunch">Lunch:</label><br>
+				  <input type="text" id="wed_lunch" name="wed_lunch"><br>
+
+				  <label for="wed_snack2">Snack 2:</label><br>
+				  <input type="text" id="wed_snack2" name="wed_snack2"><br>
+
+				  <label for="wed_dinner">Dinner:</label><br>
+				  <input type="text" id="wed_dinner" name="wed_dinner"><br>
+
+				  <p style="font-weight: bold; text-align: center;">Thursday</p><br>
+				  <label for="thu_breakfast">Breakfast:</label><br>
+				  <input type="text" id="thu_breakfast" name="thu_breakfast"><br>
+
+				  <label for="thu_snack1">Snack 1:</label><br>
+				  <input type="text" id="thu_snack1" name="thu_snack1"><br>
+
+				  <label for="thu_lunch">Lunch:</label><br>
+				  <input type="text" id="thu_lunch" name="thu_lunch"><br>
+
+				  <label for="thu_snack2">Snack 2:</label><br>
+				  <input type="text" id="thu_snack2" name="thu_snack2"><br>
+
+				  <label for="thu_dinner">Dinner:</label><br>
+				  <input type="text" id="thu_dinner" name="thu_dinner"><br>
+
+				  <p style="font-weight: bold; text-align: center;">Friday</p><br>
+				  <label for="fri_breakfast">Breakfast:</label><br>
+				  <input type="text" id="fri_breakfast" name="fri_breakfast"><br>
+
+				  <label for="fri_snack1">Snack 1:</label><br>
+				  <input type="text" id="fri_snack1" name="fri_snack1"><br>
+
+				  <label for="fri_lunch">Lunch:</label><br>
+				  <input type="text" id="fri_lunch" name="fri_lunch"><br>
+
+				  <label for="fri_snack2">Snack 2:</label><br>
+				  <input type="text" id="fri_snack2" name="fri_snack2"><br>
+
+				  <label for="fri_dinner">Dinner:</label><br>
+				  <input type="text" id="fri_dinner" name="fri_dinner"><br>
+
+				  <p style="font-weight: bold; text-align: center;">Saturday</p><br>
+				  <label for="sat_breakfast">Breakfast:</label><br>
+				  <input type="text" id="sat_breakfast" name="sat_breakfast"><br>
+
+				  <label for="sat_snack1">Snack 1:</label><br>
+				  <input type="text" id="sat_snack1" name="sat_snack1"><br>
+
+				  <label for="sat_lunch">Lunch:</label><br>
+				  <input type="text" id="sat_lunch" name="sat_lunch"><br>
+
+				  <label for="sat_snack2">Snack 2:</label><br>
+				  <input type="text" id="sat_snack2" name="sat_snack2"><br>
+
+				  <label for="sat_dinner">Dinner:</label><br>
+				  <input type="text" id="sat_dinner" name="sat_dinner"><br>
+
+				  <p style="font-weight: bold; text-align: center;">Sunday</p><br>
+				  <label for="sun_breakfast">Breakfast:</label><br>
+				  <input type="text" id="sun_breakfast" name="sun_breakfast"><br>
+
+				  <label for="sun_snack1">Snack 1:</label><br>
+				  <input type="text" id="sun_snack1" name="sun_snack1"><br>
+
+				  <label for="sun_lunch">Lunch:</label><br>
+				  <input type="text" id="sun_lunch" name="sun_lunch"><br>
+
+				  <label for="sun_snack2">Snack 2:</label><br>
+				  <input type="text" id="sun_snack2" name="sun_snack2"><br>
+
+				  <label for="sun_dinner">Dinner:</label><br>
+				  <input type="text" id="sun_dinner" name="sun_dinner"><br>
+
+		  <label><u>Step 5 - Click Generate Meal Plan to create your plan OR Click Clear Meal Plan to start over</u></label><br><br>
 		  <!-- Form button to generate meal plan -->
 		  <input type="button" value="Generate Meal Plan" onclick="generateMealPlan()">
+		  <!-- Form button to clear meal plan -->
+		  <input type="button" id="clearBtn" value="Clear Meal Plan" onclick="clearInputs(event)">
 		</form>
 	</div>
+
+	<footer class="footer">
+  		<p>&copy; 2024 Build Your Meal Plan. All rights reserved.</p>
+	</footer>
+
 </body>
 </html>
